@@ -12,7 +12,6 @@
         <module>stream-api</module>
         <module>stream-impl</module>
         <module>integration-tests</module>
-        <module>cassandra-config</module>
     </modules>
 
     <build>
@@ -79,11 +78,6 @@
                 <artifactId>lagom-javadsl-integration-client_2.11</artifactId>
                 <version>${lagom.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.typesafe.conductr</groupId>
-                <artifactId>${conductr.lib.name}</artifactId>
-                <version>1.4.7</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -92,6 +86,5 @@
 
         <lagom.version>1.2.2</lagom.version>
         <play.version>2.5.4</play.version>
-        <conductr.lib.name>lagom10-conductr-bundle-lib_2.11</conductr.lib.name>
     </properties>
 </project>

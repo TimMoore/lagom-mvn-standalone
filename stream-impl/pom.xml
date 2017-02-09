@@ -37,10 +37,6 @@
             <groupId>com.lightbend.lagom</groupId>
             <artifactId>lagom-javadsl-testkit_2.11</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.typesafe.conductr</groupId>
-            <artifactId>${conductr.lib.name}</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -49,12 +45,12 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <descriptors>
-                        <descriptor>src/assembly/conductr-bundle.xml</descriptor>
+                        <descriptor>src/assembly/standalone-bundle.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>conductr-bundle</id>
+                        <id>standalone-bundle</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -68,13 +64,6 @@
                 <configuration>
                     <lagomService>true</lagomService>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>renameConductRBundle</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
