@@ -5,6 +5,10 @@ JVM_OPTS="-Xmx128m -Xms128m"
 # This should be changed if you use Play sessions
 PLAY_SECRET=none
 
+# WARNING: lagom.cluster.join-self=on is not safe to use when running more than
+# one instance of the service. For production scenarios you must configure
+# clustering correctly for your deployment environment.
+# See https://www.lagomframework.com/documentation/current/java/Cluster.html
 CONFIG="-Dplay.crypto.secret=$PLAY_SECRET -Dlagom.cluster.join-self=on"
 
 DIR=$(dirname $0)
